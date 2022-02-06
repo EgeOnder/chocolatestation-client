@@ -10,6 +10,7 @@ import Home from './components/Home';
 import NotFound from './components/NotFound';
 import Product from './components/Product';
 import Login from './components/Login';
+import Gallery from './components/Gallery';
 
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
@@ -33,7 +34,12 @@ const App = () => {
 				<Switch>
 					<Route exact path="/" component={Home} />
 					<Route exact path="/iletisim" component={Contact} />
-					<Route exact path="/menu" component={Menu} />
+					<Route exact path="/galeri" component={Gallery} />
+					<Route
+						exact
+						path="/menu"
+						render={() => <Menu user={user} />}
+					/>
 					<Route
 						exact
 						path="/admin"

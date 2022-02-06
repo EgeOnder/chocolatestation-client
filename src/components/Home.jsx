@@ -6,31 +6,30 @@ import Footer from './partials/Footer';
 
 const selected = [
 	{
-		image: 'header.png',
+		// image: 'header.png',
 		title: 'Serpme Kahvaltı',
 		description:
 			'Peynir ve zeytin çeşitleri, tereyağı, bal, reçel, sigara böreği, domates, salatalık, mevsim yeşillikleri, haşlanmış yumurta ve sınırsız çay.',
 		path: '/menu/kahvaltilar/serpme-kahvalti',
 	},
 	{
-		image: 'header.png',
+		// image: 'header.png',
 		title: 'Hamburger Menü',
 		description: 'Hamburger, patates, kola veya ayran.',
 		path: '/menu/burgerler/hamburger-menu',
 	},
 	{
-		image: 'header.png',
+		// image: 'header.png',
 		title: 'Kahvaltı Tabağı',
 		description:
 			'Peynir ve zeytin çeşitleri, tereyağı, bal, reçel, sigara böreği, domates, salatalık, mevsim yeşillikleri, sahanda veya haşlanmış yumurta, patates kızartması, sucuk ve sınırsız çay.',
 		path: '/menu/kahvaltilar/kahvalti-tabagi',
 	},
 	{
-		image: 'header.png',
-		title: 'Spagetti Bolognese',
-		description:
-			'Baharatlandırılmış domates sosu, dana kıyma, fesleğen, parmesan peyniri.',
-		path: '/menu/makarnalar/spagetti-bolognese',
+		// image: 'header.png',
+		title: 'Margarita Pizza',
+		description: 'Domates sos, parmesan, fesleğen, mozarella.',
+		path: '/menu/pizzalar/margarita',
 	},
 ];
 
@@ -92,12 +91,17 @@ const Home = () => {
 				<div className="special-container">
 					{selected.map((food) => (
 						<div className="special-cart" key={food.path}>
-							<img
+							{/* <img
 								src={`${process.env.REACT_APP_API}/public/images/${food.image}`}
 								alt="cart"
 								className="cart-img"
-							/>
-							<h4 className="cart-title">{food.title}</h4>
+							/> */}
+							<h4
+								className="cart-title"
+								style={{ marginTop: '2rem' }}
+							>
+								{food.title}
+							</h4>
 							<p className="cart-subtitle">{food.description}</p>
 							<button
 								className="btn"

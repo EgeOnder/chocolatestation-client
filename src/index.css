@@ -9,6 +9,21 @@ body {
 	color: white;
 }
 
+.menu-edit {
+	position: fixed;
+	right: 3rem;
+	bottom: 3rem;
+	padding: 16px 24px 16px 24px;
+	cursor: pointer;
+	background: linear-gradient(
+		45deg,
+		rgba(63, 81, 181, 1) 0%,
+		rgba(109, 64, 180, 1) 100%
+	);
+	border-radius: 36px;
+	border: none;
+}
+
 .menu-old {
 	padding-top: 20vh;
 	padding-bottom: 5vh;
@@ -35,6 +50,12 @@ body {
 
 	.menu-old {
 		padding-top: 15vh;
+	}
+
+	.menu-edit {
+		right: 1rem;
+		bottom: 1rem;
+		padding: 12px 20px 12px 20px;
 	}
 }
 
@@ -288,6 +309,7 @@ body {
 	justify-content: center;
 	border: none;
 	text-align: center;
+	width: 30vw;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 	transition: 0.3s;
 	border-radius: 4px;
@@ -666,5 +688,9 @@ footer {
 	.menu-item-img {
 		width: 90vw;
 		height: 90vw;
+	}
+
+	.special-cart {
+		width: 90vw;
 	}
 }

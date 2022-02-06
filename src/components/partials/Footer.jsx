@@ -44,7 +44,7 @@ const Footer = () => {
 						>
 							+90 (282) 650 30 50
 						</li>
-						<li
+						{/* <li
 							className="footer-li"
 							onClick={() => {
 								window.open(
@@ -53,7 +53,7 @@ const Footer = () => {
 							}}
 						>
 							bilgi@istasyoncikolata.com
-						</li>
+						</li> */}
 						<li
 							className="footer-li"
 							onClick={() => {

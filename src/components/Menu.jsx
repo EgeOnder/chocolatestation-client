@@ -4,7 +4,8 @@ import Footer from './partials/Footer';
 import Navbar from './partials/Navbar';
 import Loading from './partials/Loading';
 
-const Menu = () => {
+// eslint-disable-next-line react/prop-types
+const Menu = ({ user }) => {
 	const [loading, setLoading] = useState(true);
 
 	const counter = useRef(0);
@@ -49,6 +50,17 @@ const Menu = () => {
 						className="menu-old-item"
 					/>
 				</div>
+
+				{Object.values(user).length != 0 && (
+					<>
+						<div className="menu-edit">
+							<div className="edit-button">
+								<i className="fas fa-edit"></i>{' '}
+								<span>Düzenle</span>
+							</div>
+						</div>
+					</>
+				)}
 
 				<Footer />
 			</div>
