@@ -65,13 +65,13 @@ const Navbar = ({ off }) => {
 							>
 								MENÜ
 							</button>
-							<button
+							{/* <button
 								className="btn-text"
 								style={{ marginRight: 24 }}
 								onClick={() => history.push('/galeri')}
 							>
 								GALERİ
-							</button>
+							</button> */}
 							<button
 								className="btn-text"
 								style={{ marginRight: 16 }}
@@ -94,7 +94,7 @@ const Navbar = ({ off }) => {
 								className="btn-icon"
 								onClick={() =>
 									window.open(
-										'https://instagram.com/istasyoncikolata'
+										'https://instagram.com/chocolatestationcorlu'
 									)
 								}
 							>
