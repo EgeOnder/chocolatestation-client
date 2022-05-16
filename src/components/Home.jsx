@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 import Navbar from './partials/Navbar';
 import Footer from './partials/Footer';
+import { Fade } from 'react-reveal';
 
 const selected = [
 	{
@@ -57,24 +58,28 @@ const Home = () => {
 
 			<div className="header">
 				<div className="header-container">
-					<div className="header-left">
-						<h1 className="header-title">
-							Sade Yaşama İlham Veren
-							<span className="highlight"> Mutfak</span> Anlayışı.
-						</h1>
-						<p className="header-subtitle">
-							Taze ve güncel menümüze ulaşmak için tıklayın.
-							Sağlıklı günlerde görüşmek dileğiyle.
-						</p>
-						<div className="header-buttons">
-							<button
-								className="btn"
-								onClick={() => history.push('/menu')}
-							>
-								MENÜYÜ İNCELE
-							</button>
+					<Fade left>
+						<div className="header-left">
+							<h1 className="header-title">
+								Sade Yaşama İlham Veren
+								<span className="highlight"> Mutfak</span>{' '}
+								Anlayışı.
+							</h1>
+							<p className="header-subtitle">
+								Taze ve güncel menümüze ulaşmak için tıklayın.
+								Sağlıklı günlerde görüşmek dileğiyle.
+							</p>
+							<div className="header-buttons">
+								<button
+									className="btn"
+									onClick={() => history.push('/menu')}
+								>
+									MENÜYÜ İNCELE
+								</button>
+							</div>
 						</div>
-					</div>
+					</Fade>
+
 					<div className="header-right hidden-on-mobile">
 						<img
 							src={`${process.env.REACT_APP_API}/public/images/header.png`}
@@ -88,31 +93,35 @@ const Home = () => {
 				<div className="special-title">
 					<h2>Seçtiklerimiz</h2>
 				</div>
-				<div className="special-container">
-					{selected.map((food) => (
-						<div className="special-cart" key={food.path}>
-							{/* <img
+				<Fade up>
+					<div className="special-container">
+						{selected.map((food) => (
+							<div className="special-cart" key={food.path}>
+								{/* <img
 								src={`${process.env.REACT_APP_API}/public/images/${food.image}`}
 								alt="cart"
 								className="cart-img"
 							/> */}
-							<h4
-								className="cart-title"
-								style={{ marginTop: '2rem' }}
-							>
-								{food.title}
-							</h4>
-							<p className="cart-subtitle">{food.description}</p>
-							<button
-								className="btn"
-								style={{ marginBottom: '2rem' }}
-								// onClick={() => history.push(food.path)}
-							>
-								Daha Fazla
-							</button>
-						</div>
-					))}
-				</div>
+								<h4
+									className="cart-title"
+									style={{ marginTop: '2rem' }}
+								>
+									{food.title}
+								</h4>
+								<p className="cart-subtitle">
+									{food.description}
+								</p>
+								<button
+									className="btn"
+									style={{ marginBottom: '2rem' }}
+									// onClick={() => history.push(food.path)}
+								>
+									Daha Fazla
+								</button>
+							</div>
+						))}
+					</div>
+				</Fade>
 			</div>
 
 			{/* <div className="comments">

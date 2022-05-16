@@ -21,12 +21,12 @@ const Footer = () => {
 						>
 							Menü
 						</li>
-						<li
+						{/* <li
 							className="footer-li"
 							onClick={() => history.push('/galeri')}
 						>
 							Galeri
-						</li>
+						</li> */}
 						<li
 							className="footer-li"
 							onClick={() => history.push('/iletisim')}
@@ -95,7 +95,7 @@ const Footer = () => {
 						className="btn-icon"
 						onClick={() =>
 							window.open(
-								'https://instagram.com/istasyoncikolata'
+								'https://instagram.com/chocolatestationcorlu'
 							)
 						}
 					>

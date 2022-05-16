@@ -1,10 +1,8 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 
 import Footer from './partials/Footer';
 import Navbar from './partials/Navbar';
-import Loading from './partials/Loading';
-
-const MenuImage = lazy(() => import('./MenuImage'));
+import MenuImage from './MenuImage';
 
 // eslint-disable-next-line react/prop-types
 const Menu = ({ user }) => {
@@ -17,12 +15,10 @@ const Menu = ({ user }) => {
 					src={`${process.env.REACT_APP_API}/public/images/menu/1.jpg`}
 					className="menu-old-item"
 				/>
-				<Suspense fallback={<Loading />}>
-					<MenuImage id={'2'} />
-					<MenuImage id={'3'} />
-					<MenuImage id={'4'} />
-					<MenuImage id={'5'} />
-				</Suspense>
+				<MenuImage id={'2'} />
+				<MenuImage id={'3'} />
+				<MenuImage id={'4'} />
+				<MenuImage id={'5'} />
 			</div>
 
 			{Object.values(user).length != 0 && (
